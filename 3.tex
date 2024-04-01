@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{mathtools} 
+\usepackage{fontspec}
+\usepackage[UTF8]{ctex}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\newmdtheoremenv[
+  backgroundcolor=gray!10,
+  linewidth=0pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=10pt,
+  innerbottommargin=10pt
+]{zgraytheorem}{}
+% 定义说明环境样式
+\newtheoremstyle{mystyle}% 说明环境样式的名称
+  {1em}% 上方间距
+  {1em}% 下方间距
+  {\normalfont}% 说明内容的字体样式
+  {}% 缩进量
+  {\bfseries}% 说明标记的字体样式
+  {.}% 说明标记和说明内容之间的标点
+  {1em}% 说明标记后的水平空间
+  {}% 说明标记后的垂直空间
+% 使用新定义的样式创建说明环境
+\theoremstyle{mystyle}
+\newtheorem*{zremark}{说明}
+
+% 定义证明环境样式
+\newtheoremstyle{zproofstyle}
+  {0.5em}
+  {0.5em}
+  {\itshape}
+  {}
+  {\bfseries}
+  {.}
+  {\newline}
+  {}
+\theoremstyle{zproofstyle}
+\newtheorem*{zproof}{证明}
+\newcommand{\zsub}{\mathbin{\rule{1em}{0.5em}}}
+\begin{document}
+\title{第三章 习题}
+\maketitle
+
+\section*{习题 3.18}
+\begin{zproof}
+    不妨设$\phi$其中出现的命题都在$q_0,...,q_n$之中。
+    设$s$为任意代入，$\sigma$为任意真值指派，
+    可以定义出一个真值指派$\sigma^\prime$，
+    使得$s(q_0)^\sigma = q_0^{\sigma^\prime},...,s(q_n)^\sigma = q_n^{\sigma^\prime}$，
+    因为$\phi$是重言式，所以$\phi$在任意真值指派下的值都是T，所以${\sigma^\prime} \models \phi$，
+    由命题90可知$\sigma \models \phi(s)$。
+\end{zproof}
+\end{document}
