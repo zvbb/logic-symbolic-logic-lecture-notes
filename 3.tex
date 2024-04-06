@@ -47,13 +47,40 @@
 \title{第三章 习题}
 \maketitle
 
+\section*{习题 3.17}
+\begin{zproof}
+  证明等价性，通过可以相互推导来说明
+
+  书中提到这个命题之前，
+  所有的内容都是关于代入的内容，
+  很明显这里需要把置换转换成代入，然后就可以使用代入的一系列推论。
+
+  \textcircled{1}
+
+  把$\phi$要置换的$\psi$改为$r$（保证$r$这个命题变号没有在$\phi$中出现），
+  获得的公式记作$\psi_r$，此时
+  \begin{align*}
+    \phi        & = \phi_r(\psi/r)   \\
+    \phi^\prime & = \phi_r(\chi / r) \\
+  \end{align*}
+  由推论92可知$\varGamma \models_0 \phi \leftrightarrow \phi^\prime$；
+
+  \textcircled{2}
+  
+  $\phi (\chi / p)$可以由$\phi (\psi / p)$用$\chi$替换$\psi$得到，
+  由推论93可知$\varGamma \models_0 \phi (\psi / p) \leftrightarrow \phi (\chi / p)$；
+
+  综上，命题成立；
+
+\end{zproof}
+
 \section*{习题 3.18}
 \begin{zproof}
-    不妨设$\phi$其中出现的命题都在$q_0,...,q_n$之中。
-    设$s$为任意代入，$\sigma$为任意真值指派，
-    可以定义出一个真值指派$\sigma^\prime$，
-    使得$s(q_0)^\sigma = q_0^{\sigma^\prime},...,s(q_n)^\sigma = q_n^{\sigma^\prime}$，
-    因为$\phi$是重言式，所以$\phi$在任意真值指派下的值都是T，所以${\sigma^\prime} \models \phi$，
-    由命题90可知$\sigma \models \phi(s)$。
+  不妨设$\phi$其中出现的命题都在$q_0,...,q_n$之中。
+  设$s$为任意代入，$\sigma$为任意真值指派，
+  可以定义出一个真值指派$\sigma^\prime$，
+  使得$s(q_0)^\sigma = q_0^{\sigma^\prime},...,s(q_n)^\sigma = q_n^{\sigma^\prime}$，
+  因为$\phi$是重言式，所以$\phi$在任意真值指派下的值都是T，所以${\sigma^\prime} \models \phi$，
+  由命题90可知$\sigma \models \phi(s)$。
 \end{zproof}
 \end{document}
